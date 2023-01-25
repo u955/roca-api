@@ -39,7 +39,7 @@ def get(pretrained):
     OUTPUT_SIZE = 6
     
     # 学習済みモデルの読込み
-    filepath = F'https://roca-s3.s3.amazonaws.com/roca-model/bert-slander-class_{device}.pth'
+    filepath = F'D:/rocaProjects/roca-model/bert-slander-class_{device}.pth'
     model = BERTClass(pretrained, DROP_RATE, OUTPUT_SIZE)
     model.load_state_dict(torch.load(filepath, map_location=torch.device(device)))
     return model
